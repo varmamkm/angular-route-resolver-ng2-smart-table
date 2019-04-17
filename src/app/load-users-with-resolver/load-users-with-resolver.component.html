@@ -1,0 +1,7 @@
+<p>
+User count   {{data.users.length}} (observe there is no error in console)
+</p>
+
+<ul *ngFor="let user of data.users">
+  <li>{{user.id}}-{{user.name}}-{{user.username}}-{{user.email}}</li>
+</ul>
