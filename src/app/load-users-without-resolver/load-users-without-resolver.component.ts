@@ -9,6 +9,7 @@ import { User } from '../user.entity';
 })
 export class LoadUsersWithoutResolverComponent implements OnInit {
   _users:User[];
+
   settings = {
     actions: false,
     columns: {
