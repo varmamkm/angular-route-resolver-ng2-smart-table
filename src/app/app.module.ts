@@ -8,7 +8,8 @@ import { UserService } from './user.service';
 import { Routes, RouterModule } from '@angular/router';
 import { LoadUsersWithoutResolverComponent } from './load-users-without-resolver/load-users-without-resolver.component';
 import { LoadUsersWithResolverComponent } from './load-users-with-resolver/load-users-with-resolver.component';
-import { UserResolver } from './load-users-with-resolver/user-resolver.ts';
+import { UserResolver } from './load-users-with-resolver/user-resolver';
+import { Ng2SmartTableModule } from 'ngx-smart-table';
 
 const approutes: Routes = [
   { path: 'userswithoutresolver', component: LoadUsersWithoutResolverComponent },
@@ -21,6 +22,7 @@ const approutes: Routes = [
     BrowserModule, 
     FormsModule,
     HttpClientModule,
+    Ng2SmartTableModule,
     RouterModule.forRoot(approutes) ],
   declarations: [ AppComponent, HelloComponent, LoadUsersWithoutResolverComponent, LoadUsersWithResolverComponent ],
   bootstrap:    [ AppComponent ],

@@ -3,6 +3,7 @@ import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/r
 
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
+import { User } from './user.entity';
 
 @Injectable()
 export class UserService {
@@ -12,7 +13,7 @@ export class UserService {
     private http: HttpClient) 
   { }
 
-  getUsers (): Observable<any[]> {
-    return this.http.get<any[]>(this.usersurl);
+  getUsers (): Observable<User[]> {
+    return this.http.get<User[]>(this.usersurl);
   }
 }

@@ -1,7 +1,5 @@
 <p>
-User count   {{data.users.length}} (observe there is no error in console)
+User count   {{_users.length}} (observe there is no error in console)
 </p>
 
-<ul *ngFor="let user of data.users">
-  <li>{{user.id}}-{{user.name}}-{{user.username}}-{{user.email}}</li>
-</ul>
+<ng2-smart-table [settings]="settings" [source]="_users"></ng2-smart-table>
